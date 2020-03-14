@@ -1,0 +1,27 @@
+.carousel-container {
+  .carousel .slider-wrapper.axis-horizontal .slider .slide {
+    flex-flow: row;
+    flex-direction: row;
+  }
+  .carousel-slider {
+    margin: 0 auto;
+    .slide {
+      display: flex;
+      height: 150px;
+      img {
+        width: 128px;
+        height: 100%;
+        background-color: green;
+      }
+      .description {
+        height: 100%;
+        flex: 1;
+        background-color: pink;
+        ul {
+          list-style: none;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

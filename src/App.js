@@ -3,7 +3,7 @@ import createHistory from 'history/createBrowserHistory'
 import { Switch, Route, Router } from "react-router";
 
 import Header from "./components/Header";
-import Headline from "./components/Headline";
+import Jumbotron from "./components/Jumbotron";
 import Footer from "./components/Footer";
 
 import './App.scss';
@@ -17,7 +17,7 @@ function App() {
       <Router history={history} >
         <Header />
         <Switch>
-          <Headline />
+          <Jumbotron />
           {/*<Route exact path="/" component={Header} />*/}
           <p>some text</p>
         </Switch>
