@@ -1,0 +1,16 @@
+.header-container {
+  height: 72px;
+  background-color: brown;
+  border-bottom: 1px solid black;
+  .brand {
+    display: inline-block;
+    h1 {
+      position: relative;
+      top: 12px;
+    }
+  }
+  img {
+    height: 100%;
+    display: inline-block;
+  }
+}
