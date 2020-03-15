@@ -7,7 +7,7 @@ import "./style.scss";
 
 const Reviews = () => {
   return (
-    <section className="reviews-container">
+    <section className="reviews-container centered-content">
       <h1 className="header">Latest feedback</h1>
       <Feed />
       <div className="buttons-wrapper">

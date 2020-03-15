@@ -1,0 +1,64 @@
+import React, { useState, useEffect } from "react";
+import get from "lodash/get";
+
+import { NEWS_API } from "../../api/endpoints";
+import "./style.scss";
+//============================================================================//
+
+function displayContent(newsArticles) {
+  console.log(newsArticles)
+  return (
+    <ul>
+      {newsArticles.map(article => {
+        return (
+          <li key={article.url + "-" + article.publishedAt}>
+            <a href={article.url}>{get(article, "title", "")}</a>
+            <img src={get(article, "urlToImage", "")} alt={get(article, "source.name", "")} />
+            <p>{get(article, "content", "")}</p>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+
+const News = () => {
+  useEffect(() => {
+    fetch(NEWS_API)
+      .then((response) => {
+        // lazy catch
+        if (response.status !== 200) {
+          throw new Error(response.statusText)
+        }
+        return response.json();
+      })
+      .then(data => {
+        setData(data.articles);
+      })
+      .catch((err) => {
+        setError(true);
+      });
+  }, []);
+
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+
+  if (error) {
+    return (
+      <section className="news-container centered-content">
+        <h1 className="header">Latest News</h1>
+        Failed to retrieve data. Please try again later.
+      </section>
+    )
+  }
+  return (
+    <section className="news-container centered-content">
+      <h1 className="header">News</h1>
+      {(data.length === 0) ? "Loading..." : displayContent(data)}
+      <div className="attribution">Powered by News API</div>
+    </section>
+  )
+};
+
+
+export default News;

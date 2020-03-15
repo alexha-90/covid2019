@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Jumbotron from "./components/Jumbotron";
 import Statistics from "./components/Statistics";
 import Reviews from "./components/Reviews";
+import News from "./components/News";
 import Footer from "./components/Footer";
 
 import './App.scss';
@@ -25,7 +26,7 @@ function App() {
           <Statistics />
           <Reviews />
           <hr />
-        <h1>test</h1>
+          <News />
         {/*</Switch>*/}
         <Footer />
       </Router>
