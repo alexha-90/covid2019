@@ -4,7 +4,7 @@ import get from "lodash/get";
 
 import Table from "./Table";
 import GeoChart from "./GeoChart";
-import LineGraph from "./LineGraph";
+// import LineGraph from "./LineGraph";
 
 import {US_STATISTICS_API} from "../../api/endpoints";
 import { mockStatistics } from "../../__mocks__/statistics";
@@ -19,7 +19,7 @@ function displayCounterData(data) {
   }
   return (
     <p>
-      As of <b>{displayDate}</b>, there are currently
+      As of <b>{displayDate}</b>, there are currently&nbsp;
       <b>{get(data, "confirmed", "-")}</b> cases of COVID-19 in the USA. Of
       that, <b>{get(data, "deaths", "-")}</b> have died and&nbsp;
       <b>{get(data, "recovered", "-")}</b> have recovered. The data below
@@ -39,7 +39,6 @@ const Statistics = () => {
         return response.json();
       })
       .then(data => {
-        console.log(data)
         setCounterData({
           confirmed: data.confirmed.value,
           recovered: data.recovered.value,
@@ -48,6 +47,7 @@ const Statistics = () => {
         });
       })
       .catch((err) => {
+        console.error(err);
         setError(true);
       });
   }, []);
@@ -65,7 +65,14 @@ const Statistics = () => {
         <Table results={mockStatistics}/>
         <div className="chart-wrapper">
           <GeoChart results={mockStatistics}/>
-          <LineGraph />
+          {/*<LineGraph />*/}
+          {/* temporary while better alternative to be found */}
+          <div className="statistic-counter-img-container">
+            <img
+              alt="statistic-counter"
+              src="https://covid19.mathdro.id/api/og"
+            />
+          </div>
         </div>
       </div>
     </section>
