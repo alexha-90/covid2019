@@ -4,7 +4,8 @@ import { Switch, Route, Router } from "react-router";
 
 import Header from "./components/Header";
 import Jumbotron from "./components/Jumbotron";
-import Locator from "./components/Locator";
+import Statistics from "./components/Statistics";
+import ReviewFeed from "./components/ReviewFeed";
 import Footer from "./components/Footer";
 
 import './App.scss';
@@ -20,7 +21,8 @@ function App() {
         {/*<Switch>*/}
           {/*<Route exact path="/" component={Header} />*/}
           <Jumbotron />
-          <Locator />
+          <Statistics />
+          <ReviewFeed />
         {/*</Switch>*/}
         <Footer />
       </Router>

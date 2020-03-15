@@ -9,7 +9,7 @@ import "./style.scss";
  * @props results { Array<stateName: string, yesCount: number, noCount: number>}
  */
 
-const GoogleChart = (props) => {
+const GeoChart = (props) => {
   return (
     <div className="google-chart-container">
       <Chart
@@ -34,4 +34,4 @@ const GoogleChart = (props) => {
 };
 
 
-export default GoogleChart;
+export default GeoChart;

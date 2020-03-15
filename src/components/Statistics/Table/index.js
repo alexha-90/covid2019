@@ -9,7 +9,7 @@ import "./style.scss";
  * @props results { Array<stateName: string, yesCount: number, noCount: number>}
  */
 
-const ResultTable = (props) => {
+const TableComponent = (props) => {
   // sort feature by most yes, most no
   return (
     <div className="result-table-container">
@@ -28,12 +28,14 @@ const ResultTable = (props) => {
           const totalCount = result[1] + result[2];
           const percentageTested = Math.round(result[1]/totalCount*100);
           return (
-            <tr>
-              <td>{result[0]}</td>
-              <td>{result[1]}</td>
-              <td>{result[2]}</td>
-              <td>{totalCount}</td>
-              <td>{percentageTested ? percentageTested + "%" : "-"}</td>
+            <tr key={result[0]}>
+              <td key={result[0] + "-label"}>{result[0]}</td>
+              <td key={result[0] + "-accepted"}>{result[1]}</td>
+              <td key={result[0] + "-rejected"}>{result[2]}</td>
+              <td key={result[0] + "-requested"}>{totalCount}</td>
+              <td key={result[0] + "-percentage"}>
+                {percentageTested ? percentageTested + "%" : "-"}
+              </td>
             </tr>
           )
           })}
@@ -44,4 +46,4 @@ const ResultTable = (props) => {
 };
 
 
-export default ResultTable;
+export default TableComponent;
