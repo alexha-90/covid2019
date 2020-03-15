@@ -22,7 +22,7 @@ function App() {
         {/*<Switch>*/}
           {/*<Route exact path="/" component={Header} />*/}
           {/*pass props here*/}
-          <Jumbotron />
+          {/*<Jumbotron />*/}
           <Statistics />
           <Reviews />
           <hr />
