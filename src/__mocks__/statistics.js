@@ -1,3 +1,10 @@
+export const mockDailyStatistics = [
+  ['Date', 'Percentage'],
+  ["3/14", 25.4],
+  ["3/15", 30.9],
+  ["3/16", 57],
+];
+
 export const mockStatistics = [
   ['State', 'Accepted', 'Rejected'],
   ["AK", 0, 0],

@@ -3,7 +3,7 @@ import Table from "./Table";
 import GeoChart from "./GeoChart";
 import LineGraph from "./LineGraph";
 
-import { mockStatistics } from "../../__mocks__";
+import { mockStatistics } from "../../__mocks__/statistics";
 import "./style.scss";
 //============================================================================//
 

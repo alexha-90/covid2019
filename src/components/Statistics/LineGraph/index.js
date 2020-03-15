@@ -1,6 +1,7 @@
 import React from "react";
 import { Chart } from "react-google-charts";
 
+import { mockDailyStatistics } from "../../../__mocks__/statistics";
 import "./style.scss";
 //============================================================================//
 
@@ -12,15 +13,7 @@ const LineGraph = () => {
         height={'inherit'}
         chartType="Line"
         loader={<div>Loading Chart</div>}
-        data={[
-          [
-            'Date',
-            'Percentage',
-          ],
-          ["3/14", 25.4],
-          ["3/15", 30.9],
-          ["3/16", 57],
-        ]}
+        data={mockDailyStatistics}
         options={{
           chart: {
             title: 'Accepted vs. total requested COVID-19 tests',
