@@ -3,5 +3,8 @@
   .content-wrapper {
     display: flex;
     flex-direction: row;
+    .chart-wrapper {
+      flex: 1;
+    }
   }
 }

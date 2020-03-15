@@ -17,12 +17,10 @@ const Statistics = () => {
       </p>
       <div className="content-wrapper">
         <Table results={mockStatistics}/>
-        <GeoChart results={mockStatistics}/>
-
-        {/*<div className="chart-wrapper">*/}
-          {/*<GeoChart results={results}/>*/}
-
-        {/*</div>*/}
+        <div className="chart-wrapper">
+          <GeoChart results={mockStatistics}/>
+          <LineGraph />
+        </div>
       </div>
     </section>
   )

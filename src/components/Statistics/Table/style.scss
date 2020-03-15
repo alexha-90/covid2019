@@ -2,10 +2,13 @@
   background-color: powderblue;
   width: 425px;
   height: 1120px;
-  tr {
-    td {
-      font-size: 14px;
-      padding: 0 0 0 8px;
+  table {
+    margin-bottom: 0;
+    tr {
+      td {
+        font-size: 14px;
+        padding: 0 0 0 8px;
+      }
     }
   }
 }
