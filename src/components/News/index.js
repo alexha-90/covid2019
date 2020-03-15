@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import moment from "moment";
 import get from "lodash/get";
 
 import { NEWS_API } from "../../api/endpoints";
@@ -6,15 +7,26 @@ import "./style.scss";
 //============================================================================//
 
 function displayContent(newsArticles) {
-  console.log(newsArticles)
   return (
     <ul>
       {newsArticles.map(article => {
+        let displayPublishDate = "";
+        const apiPublishDate = get(article, "publishedAt", "");
+        if (apiPublishDate) {
+          displayPublishDate = (moment(apiPublishDate).utcOffset('-0500').format('x'));
+          displayPublishDate = new Date(parseInt(displayPublishDate));
+          displayPublishDate = moment(displayPublishDate).format("MM/DD/YYYY h:mm A")
+        }
         return (
           <li key={article.url + "-" + article.publishedAt}>
-            <a href={article.url}>{get(article, "title", "")}</a>
-            <img src={get(article, "urlToImage", "")} alt={get(article, "source.name", "")} />
-            <p>{get(article, "content", "")}</p>
+            <div className="headline">
+              <a href={article.url}>{get(article, "title", "")}</a>
+              <span>{displayPublishDate}</span>
+            </div>
+            <div className="image-and-content">
+              <img src={get(article, "urlToImage", "")} alt={get(article, "source.name", "")} />
+              <p>{get(article, "content", "")}</p>
+            </div>
           </li>
         )
       })}

@@ -4,6 +4,31 @@
     list-style: none;
     li {
       margin-bottom: 12px;
+      .headline {
+        display: flex;
+        a {
+          flex: 1;
+          color: #3372ff;
+          font-size: 18px;
+          word-wrap: break-word;
+          padding-right: 8px;
+        }
+        span {
+          padding-right: 8px;
+          text-align: right;
+          text-decoration: underline;
+        }
+      }
+      .image-and-content {
+        display: flex;
+        img {
+          width: 120px;
+          margin-right: 16px;
+        }
+        p {
+
+        }
+      }
     }
 
   }
