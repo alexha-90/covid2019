@@ -15,7 +15,7 @@ export const mockReviews = [
     gender: "F",
     state: "NY",
     tested: false,
-    description: "All states now have a public health lab testing for coronavirus, and an increasing number of commercial and academic labs are testing as well. Results times vary and health departments may not know how long they may take for tests performed in private labs.",
+    description: "All tates now have a public health lab testing for coronavirus, and an increasing number states nowtates now have a public health lab testing for coronavirus, and an increasing number tates now have a public health lab testing for coronavirus, and an increasing number  have a public health lab testing for coronavirus, and an increasing number of commercial and academic labs are testing as well. Results times vary and health departments may not know how long they may take for tests performed in private labs.",
   },
   {
     initials: "T.I",

@@ -17,15 +17,21 @@ const ReviewFeed = (props) => {
           return (
             <li key={iteratorKey}>
               <div className={receivedTest ? "tested-yes" : "tested-no"}>
-                {/*<div className="user-info">*/}
-                {/*</div>*/}
-                {get(review, "initials", "")}
-                {get(review, "timeStamp", "")}
-                {get(review, "age", "")}
-                {get(review, "gender", "")}
-                {get(review, "state", "")}
-                {receivedTest ? "Yes" : "No"}
-                {get(review, "description", "")}
+                <div className="user-info">
+                  <ul>
+                    <li>{get(review, "initials", "")}</li>
+                    <li>Age: {get(review, "age", "")}</li>
+                    <li>Gender: {get(review, "gender", "")}</li>
+                  </ul>
+
+                </div>
+                <div className="description">
+                  {get(review, "description", "")}
+                </div>
+
+                {/*{get(review, "timeStamp", "")}*/}
+                {/*{get(review, "state", "")}*/}
+                {/*{receivedTest ? "Yes" : "No"}*/}
               </div>
             </li>
           )
