@@ -11,7 +11,8 @@ const Reviews = () => {
       <h1 className="header">Latest feedback</h1>
       <Feed />
       <div className="buttons-wrapper">
-        <Button variant="primary" className="submit-new-button">Submit a review</Button>{' '}
+        <Button variant="primary" className="submit-new-button">
+          Share your experience</Button>
       </div>
     </section>
   )

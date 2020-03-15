@@ -5,7 +5,12 @@ import "./style.scss";
 
 const Footer = () => {
   return (
-    <h1>Footer</h1>
+    <section className="footer-container">
+      By Alex Ha, 2020
+      <p>
+        "Transparency is not about restoring trust in institutions. Transparency is the politics of managing mistrust."
+      </p>
+    </section>
   )
 };
 
