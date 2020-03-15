@@ -14,7 +14,7 @@ const GoogleChart = (props) => {
     <div className="google-chart-container">
       <Chart
         chartType="GeoChart"
-        height="984px"
+        height="1120px"
         width="100%"
         data={props.results}
         options={{

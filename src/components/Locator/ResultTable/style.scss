@@ -1,5 +1,11 @@
 .result-table-container {
   background-color: powderblue;
-  width: 420px;
-  min-height: 984px;
+  width: 425px;
+  height: 1120px;
+  tr {
+    td {
+      font-size: 14px;
+      padding: 0 0 0 8px;
+    }
+  }
 }

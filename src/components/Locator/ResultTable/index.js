@@ -20,18 +20,20 @@ const ResultTable = (props) => {
           <th>Accepted</th>
           <th>Rejected</th>
           <th>Requested</th>
-          <th>% Accepted</th>
+          <th style={{width:"200px"}}>% Accepted</th>
         </tr>
         </thead>
         <tbody>
           {props.results.slice(1).map(result => {
+          const totalCount = result[1] + result[2];
+          const percentageTested = Math.round(result[1]/totalCount*100);
           return (
             <tr>
               <td>{result[0]}</td>
               <td>{result[1]}</td>
               <td>{result[2]}</td>
-              <td>{result[1] + result[2]}</td>
-              <td>{((result[1]/(result[1] + result[2]))*100) || "0"}%</td>
+              <td>{totalCount}</td>
+              <td>{percentageTested ? percentageTested + "%" : "-"}</td>
             </tr>
           )
           })}
