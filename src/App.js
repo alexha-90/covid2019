@@ -5,7 +5,7 @@ import { Switch, Route, Router } from "react-router";
 import Header from "./components/Header";
 import Jumbotron from "./components/Jumbotron";
 import Statistics from "./components/Statistics";
-import ReviewFeed from "./components/ReviewFeed";
+import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
 
 import './App.scss';
@@ -23,7 +23,9 @@ function App() {
           {/*pass props here*/}
           <Jumbotron />
           <Statistics />
-          <ReviewFeed />
+          <Reviews />
+          <hr />
+        <h1>test</h1>
         {/*</Switch>*/}
         <Footer />
       </Router>

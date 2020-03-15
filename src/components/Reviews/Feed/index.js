@@ -1,15 +1,16 @@
 import React from "react";
 import get from "lodash/get";
 
-import { mockReviews } from "../../__mocks__/reviews";
+import Pagination from "./Pagination/index";
+
+import { mockReviews } from "../../../__mocks__/reviews";
 import "./style.scss";
 //============================================================================//
 
-const ReviewFeed = (props) => {
+const Feed = (props) => {
   const reviews = props.reviews || mockReviews;
   return (
-    <section className="review-feed-container">
-      <h1 className="header">Latest feedback</h1>
+    <div className="feed-container">
       <ul>
         {reviews.map(review => {
           const iteratorKey = get(review, "initials", "") + get(review, "timeStamp", "");
@@ -40,9 +41,10 @@ const ReviewFeed = (props) => {
           )
         })}
       </ul>
-    </section>
+      <Pagination />
+    </div>
   )
 };
 
 
-export default ReviewFeed;
+export default Feed;
