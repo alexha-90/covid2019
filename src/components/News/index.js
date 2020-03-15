@@ -10,6 +10,10 @@ function displayContent(newsArticles) {
   return (
     <ul>
       {newsArticles.map(article => {
+        // necessary hack since resp. includes [+123 chars..." for some reason
+        let content = get(article, "content", "").split("[+")[0];
+
+        // convert from UTC to nicely formatted US (EST)
         let displayPublishDate = "";
         const apiPublishDate = get(article, "publishedAt", "");
         if (apiPublishDate) {
@@ -25,7 +29,7 @@ function displayContent(newsArticles) {
             </div>
             <div className="image-and-content">
               <img src={get(article, "urlToImage", "")} alt={get(article, "source.name", "")} />
-              <p>{get(article, "content", "")}</p>
+              <p>{content}</p>
             </div>
           </li>
         )
@@ -38,7 +42,7 @@ const News = () => {
   useEffect(() => {
     fetch(NEWS_API)
       .then((response) => {
-        // lazy catch
+        // lazy catch but will work for this context
         if (response.status !== 200) {
           throw new Error(response.statusText)
         }
