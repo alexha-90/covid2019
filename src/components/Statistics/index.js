@@ -55,8 +55,6 @@ const Statistics = () => {
   const [counterData, setCounterData] = useState({});
   const [error, setError] = useState(false);
 
-  const { confirmed, recovered, deaths, timeStamp } = counterData;
-
   return (
     <section className="locator-container">
       <h1 className="header">Test Tracker</h1>
