@@ -17,10 +17,9 @@
         .user-info {
           padding-left: 8px;
           padding-bottom: 8px;
-          background-color: mediumseagreen;
           border-right: 1px solid black;
           ul {
-            width: 80px;
+            width: 90px;
             li:first-of-type {
              font-size: 20px;
             }
@@ -32,7 +31,26 @@
 
         }
         .description {
-          padding: 8px;
+          width: 100%;
+          .top-bar {
+            //padding: 8px;
+            display: flex;
+            background-color: darkkhaki;
+            div {
+              text-align: center;
+              border-right: 1px solid black;
+              padding: 8px;
+              flex: 1;
+            }
+            div:last-of-type{
+              border-right: none;
+              text-align: right;
+            }
+          }
+          .text {
+            padding: 4px 8px 8px 8px;
+
+          }
 
         }
       }
@@ -41,9 +59,15 @@
         margin-left:auto;
         margin-right:0;
         background-color: #22a421;
+        .user-info {
+          background-color: #22b821;
+        }
       }
       .tested-no {
         background-color: #802132;
+        .user-info {
+          background-color: #a12338;
+        }
       }
     }
   }

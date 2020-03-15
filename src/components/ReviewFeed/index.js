@@ -26,12 +26,15 @@ const ReviewFeed = (props) => {
 
                 </div>
                 <div className="description">
-                  {get(review, "description", "")}
+                  <div className="top-bar">
+                      <div>Tested: {receivedTest ? "Yes" : "No"}</div>
+                      <div>State: {get(review, "state", "")}</div>
+                      <div>{get(review, "timeStamp", "")}</div>
+                  </div>
+                  <div className="text">
+                    {get(review, "text", "")}
+                  </div>
                 </div>
-
-                {/*{get(review, "timeStamp", "")}*/}
-                {/*{get(review, "state", "")}*/}
-                {/*{receivedTest ? "Yes" : "No"}*/}
               </div>
             </li>
           )
