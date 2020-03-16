@@ -1,0 +1,49 @@
+.submission-container {
+  width: 75%;
+  margin: 56px auto 32px auto;
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px 0;
+  form {
+    text-align: left;
+    label {
+      margin-right: 8px;
+    }
+    label:first-of-type {
+      margin-left: 8px;
+    }
+    .initials-input {
+      height: 30px;
+      padding: 0 4px;
+      margin-right: 8px;
+      margin-top: 1px; // align to macOS native select
+    }
+    select {
+      height: 30px;
+      border: none;
+      border-radius: 0;
+      margin-right: 8px;
+    }
+    select:last-of-type {
+      margin-right: 0;
+    }
+    .divider {
+      margin: 12px 0;
+      border-bottom: 1px solid black;
+    }
+    .description-wrapper {
+      display: flex;
+      label {
+
+      }
+      input {
+        flex: 1;
+        margin-right: 8px;
+        height: 200px;
+        min-height: 200px;
+        line-height: 200px;
+      }
+    }
+  }
+}
