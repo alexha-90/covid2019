@@ -29,7 +29,7 @@ function displayContent(newsArticles) {
             </div>
             <div className="image-and-content">
               <img src={get(article, "urlToImage", "")} alt={get(article, "source.name", "")} />
-              <p>{content}</p>
+              <div>{content}</div>
             </div>
           </li>
         )

@@ -34,7 +34,7 @@ const Reviews = () => {
       <Feed />
       <div className="buttons-wrapper">
         <Button
-          variant="primary"
+          variant="secondary"
           className="share-experience-button"
           onClick={() => setShowNewSubmissionBtn(!showNewSubmissionBtn)}
         >
