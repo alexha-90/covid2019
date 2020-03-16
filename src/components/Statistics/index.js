@@ -19,13 +19,9 @@ function displayCounterData(data) {
   }
   return (
     <div className="counter-wrapper">
-      <p>
-        As of <b>{displayDate}</b>, there are currently&nbsp;
-        <b>{get(data, "confirmed", "-")}</b> cases of COVID-19 in the USA. Of
-        that, <b>{get(data, "deaths", "-")}</b> have died and&nbsp;
-        <b>{get(data, "recovered", "-")}</b> have recovered. The data below
-        displays cases that have been accepted or rejected from testing.
-      </p>
+      As of <b>{displayDate}</b>, there are <b>{get(data, "confirmed", "-")}</b>&nbsp;
+      cases of COVID-19 in the USA. Of that, <b>{get(data, "deaths", "-")}</b> have died and&nbsp;
+      <b>{get(data, "recovered", "-")}</b> have recovered.
     </div>
   );
 }
@@ -61,7 +57,7 @@ const Statistics = () => {
 
   return (
     <section className="locator-container">
-      <h1 className="header">Test Tracker</h1>
+      {/*<h1 className="header">Test Tracker</h1>*/}
       {(isEmpty(counterData) || error) ? "" : displayCounterData(counterData)}
       <div className="content-wrapper">
         <Table results={mockStatistics}/>

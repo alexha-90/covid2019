@@ -1,10 +1,14 @@
 .header-container {
   height: 72px;
-  background-color: brown;
-  border-bottom: 1px solid black;
+  background: url(../../assets/virus-1812092_640.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+
   .brand {
     display: inline-block;
     h1 {
+      color: white;
       position: relative;
       top: 12px;
     }
@@ -12,6 +16,7 @@
   img {
     height: 100%;
     display: inline-block;
-    margin-left: 72px;
+    padding: 8px 0;
+    margin: 0 12px 0 72px;
   }
 }

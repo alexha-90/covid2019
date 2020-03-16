@@ -1,11 +1,14 @@
 .footer-container {
-  background-color: rosybrown;
   text-align: center;
   min-height: 80px;
   padding-top: 20px;
+  background: url(../../assets/virus-1812092_640.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   p {
     font-size: 14px;
-    color: gray;
+    color: #d7d7d7;
     font-style: inherit;
   }
 }
