@@ -33,7 +33,7 @@ const Feed = (props) => {
                       <div>{get(review, "timeStamp", "")}</div>
                   </div>
                   <div className="text">
-                    {get(review, "text", "")}
+                    {get(review, "description", "")}
                   </div>
                 </div>
               </div>

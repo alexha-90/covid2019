@@ -6,7 +6,7 @@ export const mockReviews = [
     gender: 'M',
     state: 'California (CA)',
     tested: false,
-    text:
+    description:
       "I've been coughing for weeks. Finally went to the doctor and was told CDC needs more info. This is BS. I have more stuff"
   },
   {
@@ -16,7 +16,7 @@ export const mockReviews = [
     gender: 'F',
     state: 'New York (NY)',
     tested: false,
-    text:
+    description:
       'All tates now have a public health lab testing for coronavirus, and an increasing number states nowtates now have a public health lab testing for coronavirus, and an increasing number tates now have a public health lab testing for coronavirus, and an increasing number  have a public health lab testing for coronavirus, and an increasing number of commercial and academic labs are testing as well. Results times vary and health departments may not know how long they may take for tests performed in private labs.'
   },
   {
@@ -26,7 +26,7 @@ export const mockReviews = [
     gender: '-',
     state: 'Washington (WA)',
     tested: true,
-    text: 'Easy. Showed up, swabbed mouth. I was out in 10 mins.'
+    description: 'Easy. Showed up, swabbed mouth. I was out in 10 mins.'
   },
   {
     initials: 'Y.U.',
@@ -35,7 +35,7 @@ export const mockReviews = [
     gender: 'M',
     state: 'Texas (TX)',
     tested: false,
-    text:
+    description:
       'Spain and France have announced countrywide restrictions, and passengers on U.S. flights from Europe are waiting hours to go through enhanced health screening.'
   },
   {
@@ -45,7 +45,7 @@ export const mockReviews = [
     gender: '-',
     state: 'Washington (WA)',
     tested: true,
-    text:
+    description:
       'The Italian Ministry of Health said Saturday evening that 1,966 people have recovered from the virus and 1,441 have died. The ministry said 8,372 patients remain hospitalized across the country, with 1,518 of them in intensive care units.'
   },
   {
@@ -55,7 +55,7 @@ export const mockReviews = [
     gender: 'F',
     state: 'Washington (WA)',
     tested: true,
-    text:
+    description:
       'A man in his 30s who traveled to Thailand from February 28 to March 1, and to Japan from March 5 to 8. He developed symptoms on Wednesday.'
   },
   {
@@ -65,7 +65,7 @@ export const mockReviews = [
     gender: '-',
     state: 'California (CA)',
     tested: true,
-    text:
+    description:
       'Tourist attractions in Abu Dhabi and Dubai, such as theme parks, public beaches, and cultural spots, will be closed until the end of March.'
   },
   {
@@ -75,7 +75,7 @@ export const mockReviews = [
     gender: 'M',
     state: 'Hawaii (HI)',
     tested: false,
-    text:
+    description:
       'China lifts travel restrictions: Highways are reopening, quarantine stations are being removed, and employees are returning to work, now that the country has largely contained its outbreak.'
   },
   {
@@ -85,7 +85,7 @@ export const mockReviews = [
     gender: 'M',
     state: 'Massachusetts (MA)',
     tested: false,
-    text:
+    description:
       't will only continue three long-haul international routes: one flight a day from Dallas to London, one from Miami to London, and three flights a week from Dallas to Tokyo.\n' +
       '\n' +
       'Short-haul international flights, like those from the US to Canada, Mexico, the Caribbean, Central America, and certain parts of South America will continue.\n' +
@@ -99,7 +99,7 @@ export const mockReviews = [
     gender: 'F',
     state: 'Michigan (MI)',
     tested: true,
-    text:
+    description:
       'The pets are at risk of starvation. Residents who were forced to leave their pets behind typically left enough food and water to last them for a few days, mates are impossible, but we do know that in Wuhan, for example, animal activists have assisted with animals in upwards of 1,000 apartments. So, the numbers nationwide will be significant, she said. thinking they would be able to return soon, some animal advocates told CNN.'
   }
 ];

@@ -6,7 +6,7 @@
   border-radius: 5px;
   padding: 8px;
 
-  // wow so many bootstrap problems
+  // wow so many bootstrap overrides needed
   .initials-wrapper {
     display: flex;
     span {
@@ -36,5 +36,10 @@
   .submission-text-inputgroup {
     margin-top: 12px;
     min-height: 180px;
+  }
+
+  .submit-new-button {
+    margin-top: 12px;
+    width: 120px;
   }
 }

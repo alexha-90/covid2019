@@ -1,14 +1,30 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import Dropdown from "react-bootstrap/Dropdown";
 
 import { US_STATES } from "../../../constants/states";
+import { NEW_REVIEW_FIELDS } from "../../../enums";
 import "./style.scss";
 //============================================================================//
 
-const Submission = () => {
-  // to uppercase
+/**
+*
+* @props:
+*   newSubmissionInput {
+*     initials: string,
+*     age: string,
+*     gender: string,
+*     state: string,
+*     tested: boolean,
+*     text: string
+*    }
+*   onChange: (key, val) => void
+*/
+
+const Submission = (props) => {
+  const { newSubmissionInput, onChange } = props;
   return (
     <div className="submission-container">
 
@@ -25,7 +41,7 @@ const Submission = () => {
         <InputGroup className="submission-dropdown-inputgroup">
           <Dropdown
             className="submission-dropdown"
-            onSelect={val => {console.log(val)}}>
+            onSelect={val => {onChange(NEW_REVIEW_FIELDS.AGE, val)}}>
             <Dropdown.Toggle variant="info">
               Age Group:
             </Dropdown.Toggle>
@@ -89,6 +105,13 @@ const Submission = () => {
         <FormControl as="textarea" aria-label="With textarea" />
       </InputGroup>
 
+      <Button
+        variant="success"
+        className="submit-new-button"
+        // onClick={() => setShowSubmission(!showSubmission)}
+      >
+        Submit
+      </Button>
     </div>
   )
 };
