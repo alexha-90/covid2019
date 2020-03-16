@@ -18,38 +18,42 @@ function displayCounterData(data) {
     displayDate = easternTimeZoneFormatter(data.lastUpdate);
   }
   return (
-    <p>
-      As of <b>{displayDate}</b>, there are currently&nbsp;
-      <b>{get(data, "confirmed", "-")}</b> cases of COVID-19 in the USA. Of
-      that, <b>{get(data, "deaths", "-")}</b> have died and&nbsp;
-      <b>{get(data, "recovered", "-")}</b> have recovered. The data below
-      displays cases that have been accepted or rejected from testing.
-    </p>
+    <div className="counter-wrapper">
+      <p>
+        As of <b>{displayDate}</b>, there are currently&nbsp;
+        <b>{get(data, "confirmed", "-")}</b> cases of COVID-19 in the USA. Of
+        that, <b>{get(data, "deaths", "-")}</b> have died and&nbsp;
+        <b>{get(data, "recovered", "-")}</b> have recovered. The data below
+        displays cases that have been accepted or rejected from testing.
+      </p>
+    </div>
   );
 }
 
 const Statistics = () => {
   useEffect(() => {
-    fetch(US_STATISTICS_API)
-      .then((response) => {
-        // lazy catch but will work for this context
-        if (response.status !== 200) {
-          throw new Error(response.statusText)
-        }
-        return response.json();
-      })
-      .then(data => {
-        setCounterData({
-          confirmed: data.confirmed.value,
-          recovered: data.recovered.value,
-          deaths: data.deaths.value,
-          lastUpdate: data.lastUpdate
+    (async function fetchData() {
+      await fetch(US_STATISTICS_API)
+        .then((response) => {
+          // lazy catch but will work for this context
+          if (response.status !== 200) {
+            throw new Error(response.statusText)
+          }
+          return response.json();
+        })
+        .then(data => {
+          setCounterData({
+            confirmed: data.confirmed.value,
+            recovered: data.recovered.value,
+            deaths: data.deaths.value,
+            lastUpdate: data.lastUpdate
+          });
+        })
+        .catch((err) => {
+          console.error(err);
+          setError(true);
         });
-      })
-      .catch((err) => {
-        console.error(err);
-        setError(true);
-      });
+    })()
   }, []);
 
   const [counterData, setCounterData] = useState({});

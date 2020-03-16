@@ -1,5 +1,11 @@
 .locator-container {
   background-color: aquamarine;
+  .counter-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
   .content-wrapper {
     display: flex;
     flex-direction: row;
