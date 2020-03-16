@@ -7,7 +7,7 @@ import "./style.scss";
 //============================================================================//
 
 const Reviews = () => {
-  const [showSubmission, setShowSubmission] = useState(true);
+  const [showSubmission, setShowSubmission] = useState(false);
   return (
     <section className="reviews-container centered-content">
       <h1 className="header">Latest feedback</h1>

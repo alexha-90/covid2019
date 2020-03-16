@@ -1,7 +1,9 @@
 import React from "react";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
+import Dropdown from "react-bootstrap/Dropdown";
 
 import { US_STATES } from "../../../constants/states";
-
 import "./style.scss";
 //============================================================================//
 
@@ -9,56 +11,84 @@ const Submission = () => {
   // to uppercase
   return (
     <div className="submission-container">
-      <form>
-        <label htmlFor="initials">Initials:</label>
-        <input
-          type="text"
-          name="initials"
-          className="initials-input"
+
+      <div className="initials-wrapper">
+        <InputGroup.Prepend>
+          <InputGroup.Text id="initials">Initials:</InputGroup.Text>
+        </InputGroup.Prepend>
+        <FormControl
           maxLength={2}
-          style={{ width: "46px" }}
+          aria-label="initials"
+          aria-describedby="initials"
         />
 
-        <label htmlFor="age-range">Age:</label>
-        <select name="age-range">
-          <option value="16-24">16-24</option>
-          <option value="25-34">25-34</option>
-          <option value="35-44">35-44</option>
-          <option value="45-54">45-54</option>
-          <option value="55-64">55-64</option>
-          <option value="65-74">65-74</option>
-          <option value="75+">75+</option>
-        </select>
+        <InputGroup className="submission-dropdown-inputgroup">
+          <Dropdown
+            className="submission-dropdown"
+            onSelect={val => {console.log(val)}}>
+            <Dropdown.Toggle variant="info">
+              Age Group:
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#" eventKey={"16-24"}>16-24</Dropdown.Item>
+              <Dropdown.Item href="#" eventKey={"25-34"}>25-34</Dropdown.Item>
+              <Dropdown.Item href="#" eventKey={"45-54"}>45-54</Dropdown.Item>
+              <Dropdown.Item href="#" eventKey={"65-74"}>65-74</Dropdown.Item>
+              <Dropdown.Item href="#" eventKey={"75+"}>75+</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
 
-        <label htmlFor="gender">Gender:</label>
-        <select name="gender">
-          <option value="16-24">M</option>
-          <option value="25-34">F</option>
-          <option value="35-44">N/A</option>
-        </select>
+          <Dropdown
+            className="submission-dropdown"
+            onSelect={val => {console.log(val)}}>
+            <Dropdown.Toggle variant="info">
+              Gender:
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#" eventKey={"M"}>Male</Dropdown.Item>
+              <Dropdown.Item href="#" eventKey={"F"}>Female</Dropdown.Item>
+              <Dropdown.Item href="#" eventKey={"-"}>Other</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
 
-        <label htmlFor="tested">Tested:</label>
-        <select name="tested">
-          <option value={true}>Yes</option>
-          <option value={false}>No</option>
-        </select>
+          <Dropdown
+            className="submission-dropdown"
+            onSelect={val => {console.log(val)}}>
+            <Dropdown.Toggle variant="info">
+              Tested:
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#" eventKey={true}>Yes</Dropdown.Item>
+              <Dropdown.Item href="#" eventKey={false}>No</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
 
-        <label htmlFor="state">State:</label>
-        <select name="state">
-          {US_STATES.map(state => {
-            return (
-              <option value={state[1]}>{state[0]} ({state[1]})</option>
-            )
-          })}
-        </select>
+          <Dropdown onSelect={val => {console.log(val)}}>
+            <Dropdown.Toggle variant="info">
+              State:
+            </Dropdown.Toggle>
+            <Dropdown.Menu className="submission-state-dropdown">
+              {US_STATES.map(state => {
+                return (
+                  <Dropdown.Item
+                    href="#"
+                    key={state[1]}
+                    eventKey={state[1]}>{state[0]} ({state[1]})
+                  </Dropdown.Item>
+                )
+              })}
+            </Dropdown.Menu>
+          </Dropdown>
+        </InputGroup>
+      </div>
 
-        <div className="divider" />
+      <InputGroup className="submission-text-inputgroup">
+        <InputGroup.Prepend>
+          <InputGroup.Text>Description:</InputGroup.Text>
+        </InputGroup.Prepend>
+        <FormControl as="textarea" aria-label="With textarea" />
+      </InputGroup>
 
-        <div className="description-wrapper">
-          <label htmlFor="description">Description:</label>
-          <input type="text" />
-        </div>
-      </form>
     </div>
   )
 };

@@ -4,6 +4,7 @@
     list-style: none;
     li {
       // generic styling first, then apply more with specificity
+      margin-top: 14px;
       > div {
         color: white;
         display: flex;

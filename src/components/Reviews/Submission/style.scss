@@ -1,49 +1,40 @@
 .submission-container {
   width: 75%;
-  margin: 56px auto 32px auto;
+  margin: 36px auto 32px auto;
   background-color: yellow;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 8px 0;
-  form {
-    text-align: left;
-    label {
-      margin-right: 8px;
-    }
-    label:first-of-type {
-      margin-left: 8px;
-    }
-    .initials-input {
-      height: 30px;
-      padding: 0 4px;
-      margin-right: 8px;
-      margin-top: 1px; // align to macOS native select
-    }
-    select {
-      height: 30px;
-      border: none;
-      border-radius: 0;
-      margin-right: 8px;
-    }
-    select:last-of-type {
-      margin-right: 0;
-    }
-    .divider {
-      margin: 12px 0;
-      border-bottom: 1px solid black;
-    }
-    .description-wrapper {
-      display: flex;
-      label {
+  padding: 8px;
 
+  // wow so many bootstrap problems
+  .initials-wrapper {
+    display: flex;
+    span {
+      width: 115px;
+      border-right: none;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    input {
+      width: 60px;
+      margin-right: 16px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .submission-dropdown-inputgroup {
+      .submission-dropdown {
+        margin-right: 16px;
       }
-      input {
-        flex: 1;
-        margin-right: 8px;
-        height: 200px;
-        min-height: 200px;
-        line-height: 200px;
+      .submission-state-dropdown {
+        // necessary hack: menu is reversed since too long. React bootstrap problem
+        transform: translate3d(0px, 40px, 0px)!important;
       }
     }
+  }
+
+  .submission-text-inputgroup {
+    margin-top: 12px;
+    min-height: 180px;
   }
 }
