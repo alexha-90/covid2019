@@ -1,10 +1,11 @@
 .app-container {
   margin: 0 auto;
-  background-color: darkgray;
+  //background-color: darkgray;
   max-width: 1280px;
 
   .header {
     padding-top: 16px;
+    font-weight: 700;
     text-align: center;
   }
   .centered-content {
