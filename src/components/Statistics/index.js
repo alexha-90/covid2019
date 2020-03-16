@@ -57,7 +57,6 @@ const Statistics = () => {
 
   return (
     <section className="locator-container">
-      {/*<h1 className="header">Test Tracker</h1>*/}
       {(isEmpty(counterData) || error) ? "" : displayCounterData(counterData)}
       <div className="content-wrapper">
         <Table results={mockStatistics}/>
