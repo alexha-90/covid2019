@@ -93,7 +93,7 @@ export const mockReviews = [
       'Domestic flights are not immune, however. The airline anticipates its domestic capacity in April will be reduced by 20% compared to last year, and the number could fall to 30% by May on a year-over-year basis.'
   },
   {
-    initials: 'O.F',
+    initials: 'O.F.',
     timeStamp: '3/08/2020, 3:53am EST',
     age: '30-40',
     gender: 'F',
