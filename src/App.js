@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from "./components/Header";
 import Statistics from "./components/Statistics";
-import Reviews from "./components/Reviews";
+import Comments from "./components/Comments";
 import News from "./components/News";
 import Footer from "./components/Footer";
 
@@ -33,7 +33,7 @@ function App() {
       <Header />
       <div className="app-container">
         <Statistics />
-        <Reviews />
+        <Comments />
         <hr />
         <News />
       </div>

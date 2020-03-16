@@ -1,4 +1,4 @@
-export const NEW_REVIEW_FIELDS = {
+export const NEW_COMMENT_FIELDS = {
   INITIALS: "initials",
   AGE: "age",
   GENDER: "gender",

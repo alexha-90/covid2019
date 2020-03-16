@@ -4,19 +4,19 @@ import Button from "react-bootstrap/Button";
 import Feed from "./Feed";
 import Submission from "./Submission";
 
-import { NEW_REVIEW_FIELDS } from "../../enums";
+import { NEW_COMMENT_FIELDS } from "../../enums";
 import "./style.scss";
 //============================================================================//
 
 const Reviews = () => {
   const [showNewSubmissionBtn, setShowNewSubmissionBtn] = useState(false);
   const [newSubmissionInput, setNewSubmissionInput] = useState({
-    [NEW_REVIEW_FIELDS.INITIALS]: "",
-    [NEW_REVIEW_FIELDS.AGE]: "",
-    [NEW_REVIEW_FIELDS.GENDER]: "",
-    [NEW_REVIEW_FIELDS.STATE]: "",
-    [NEW_REVIEW_FIELDS.TESTED]: "",
-    [NEW_REVIEW_FIELDS.DESCRIPTION]: ""
+    [NEW_COMMENT_FIELDS.INITIALS]: "",
+    [NEW_COMMENT_FIELDS.AGE]: "",
+    [NEW_COMMENT_FIELDS.GENDER]: "",
+    [NEW_COMMENT_FIELDS.STATE]: "",
+    [NEW_COMMENT_FIELDS.TESTED]: "",
+    [NEW_COMMENT_FIELDS.DESCRIPTION]: ""
   });
 
   const handleOnChangeInput = (key, value) => {
@@ -29,8 +29,8 @@ const Reviews = () => {
   console.log(newSubmissionInput);
 
   return (
-    <section className="reviews-container centered-content">
-      <h1 className="header">Latest feedback</h1>
+    <section className="comments-container centered-content">
+      <h1 className="header">Latest comments</h1>
       <Feed />
       <div className="buttons-wrapper">
         <Button
