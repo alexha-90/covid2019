@@ -17,7 +17,11 @@ for (let number = 1; number <= 5; number++) {
 const PaginationComponent = () => {
   return (
     <div className="pagination-container">
-      <Pagination style={{ float: "right" }}>{items}</Pagination>
+      <Pagination
+        style={{ float: "right" }}
+      >
+        {items}
+        </Pagination>
     </div>
   )
 };

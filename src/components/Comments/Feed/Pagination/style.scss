@@ -1,3 +1,40 @@
 .pagination-container {
   display: block;
+
+  // since native pagination styling not supported by bootstrap.
+  // See https://stackoverflow.com/questions/32355009/changing-pagination-colour-bootstrap/32355258
+  .page-item.active > span {
+    border-color: #6c757d;
+    background-color: #6c757d;
+  }
+  .pagination > li > a
+  {
+    background-color: white;
+    color: #3f3f3f;
+  }
+
+  .pagination > li > a:focus,
+  .pagination > li > a:hover,
+  .pagination > li > span:focus,
+  .pagination > li > span:hover
+  {
+    color: #3f3f3f;
+    background-color: #eee;
+    border-color: #ddd;
+  }
+
+  .pagination > .active > a
+  {
+    color: white;
+    background-color: #3f3f3f!important;
+    border: solid 1px #3f3f3f!important;
+  }
+
+  .pagination > .active > a:hover
+  {
+    background-color: #3f3f3f!important;
+    border: solid 1px #3f3f3f;
+  }
+
+
 }

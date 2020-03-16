@@ -69,7 +69,7 @@ const News = () => {
   }
   return (
     <section className="news-container centered-content">
-      <h1 className="header">News</h1>
+      <h1 className="header">Latest News</h1>
       {(data.length === 0) ? "Loading..." : displayContent(data)}
       <div className="attribution">Powered by News API</div>
     </section>

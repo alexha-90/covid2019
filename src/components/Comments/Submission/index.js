@@ -141,7 +141,7 @@ const Submission = (props) => {
       </InputGroup>
 
       <Button
-        variant="success"
+        variant="primary"
         className="submit-new-button"
         // onClick={() => setShowSubmission(!showSubmission)}
       >

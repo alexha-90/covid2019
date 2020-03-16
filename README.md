@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 features TBD: filtering by state, jumbotron. Blur other inputs other than
-new post when selected.
+new post when selected. Captcha
 
 ## Available Scripts
 
